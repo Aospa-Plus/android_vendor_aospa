@@ -24,7 +24,7 @@
 # This is the global AOSPA version flavor that determines the focal point
 # behind our releases. This is bundled alongside $(AOSPA_MINOR_VERSION)
 # and only changes per major Android releases.
-AOSPA_MAJOR_VERSION := uvite
+AOSPA_MAJOR_VERSION := plus-1.0
 
 # The version code is the upgradable portion during the cycle of
 # every major Android release. Each version code upgrade indicates
@@ -49,7 +49,7 @@ ifdef AOSPA_BUILDTYPE
       AOSPA_BUILD_VARIANT := stable
   endif
 else
-  AOSPA_BUILD_VARIANT := unofficial
+  AOSPA_BUILD_VARIANT := community
 endif
 
 # Build Date
