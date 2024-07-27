@@ -70,6 +70,7 @@ PRODUCT_PACKAGES += \
     IconShapeTaperedRectOverlay \
     IconShapeTeardropOverlay \
     IconShapeVesselOverlay \
+    ImmersiveNavigationOverlay \
     ParanoidLauncherOverlay \
     RoundQSOverlay
 
