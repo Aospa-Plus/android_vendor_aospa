@@ -95,11 +95,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GameSpace
 
-# Google - GMS, Pixel, and Mainline Modules
-$(call inherit-product, vendor/google/gms/config.mk)
-$(call inherit-product, vendor/google/pixel/config.mk)
-ifneq ($(TARGET_EXCLUDE_GMODULES), true)
-$(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules.mk)
+# Google stuff
+ifneq ($(VANILLA_BUILD),true)
+    # GMS
+    ifneq ($(wildcard vendor/google/gms/config.mk),)
+        $(call inherit-product, vendor/google/gms/config.mk)
+    endif
+    # Modules
+    ifneq ($(TARGET_EXCLUDE_GMODULES), true)
+        $(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules.mk)
+    endif
+
+    # Pixel
+    $(call inherit-product, vendor/google/pixel/config.mk)
+else
+    $(warning Building vanilla - without gapps)
 endif
 
 # HIDL
