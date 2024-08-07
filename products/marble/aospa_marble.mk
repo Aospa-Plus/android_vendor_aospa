@@ -38,4 +38,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Boot animation resolution.
 TARGET_BOOT_ANIMATION_RES := 1080
 
+#Aospa Plus Info
+ro.aospaplus.device_maintainer=Matis
+ro.aospaplus.device_maintainer_url=https://t.me/matis_7
+
 endif
