@@ -101,14 +101,13 @@ ifneq ($(VANILLA_BUILD),true)
     ifneq ($(wildcard vendor/google/gms/config.mk),)
         $(call inherit-product, vendor/google/gms/config.mk)
     endif
+else
     # Modules
     ifneq ($(TARGET_EXCLUDE_GMODULES), true)
         $(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules.mk)
     endif
-
     # Pixel
     $(call inherit-product, vendor/google/pixel/config.mk)
-else
     $(warning Building vanilla - without gapps)
 endif
 
